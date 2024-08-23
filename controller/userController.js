@@ -81,7 +81,7 @@ async function login(req, res) {
   try {
     //Queries the database to find a user with the provided email.
     const [user] = await dbConnection.query(
-      "select username,password,userid from usertable where email=?",
+      "select username,password,userid from userTable where email=?",
       [email]
     );
     if (user.length == 0) {
